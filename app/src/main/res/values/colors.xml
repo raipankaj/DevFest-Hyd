@@ -5,4 +5,5 @@
     <color name="colorAccent">#001a33</color>
 
     <color name="splash_bg">#FBFBFB</color>
+    <color name="notification_tint">#536DFE</color>
 </resources>

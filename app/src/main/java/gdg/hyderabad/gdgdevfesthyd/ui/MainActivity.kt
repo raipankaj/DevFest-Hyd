@@ -1,11 +1,22 @@
 package gdg.hyderabad.gdgdevfesthyd.ui
 
 import android.annotation.SuppressLint
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.graphics.BitmapFactory
+import android.media.RingtoneManager
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
 import gdg.hyderabad.gdgdevfesthyd.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -29,6 +40,7 @@ class MainActivity : AppCompatActivity() {
     private val mWebViewClient = object: WebViewClient() {
 
         override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+            Log.e("Check","url"+url)
             wvPage.loadUrl(url)
             return true
         }

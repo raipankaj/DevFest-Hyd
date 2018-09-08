@@ -8,6 +8,7 @@ import android.content.Intent
 import android.media.RingtoneManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import gdg.hyderabad.gdgdevfesthyd.ui.MainActivity
@@ -36,7 +37,8 @@ class FCMService : FirebaseMessagingService() {
         val channelId = getString(R.string.default_notification_channel_id)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-                .setSmallIcon(R.drawable.notification)
+                .setSmallIcon(R.drawable.dev_notification)
+                .setColor(ContextCompat.getColor(this, R.color.notification_tint))
                 .setContentTitle(title ?: "DevFest Hyd")
                 .setContentText(messageBody)
                 .setAutoCancel(true)
