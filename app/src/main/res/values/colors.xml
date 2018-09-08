@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#001a33</color>
-    <color name="colorPrimaryDark">#001a33</color>
+    <color name="colorPrimaryDark">#0f031e</color>
     <color name="colorAccent">#001a33</color>
+
+    <color name="splash_bg">#FBFBFB</color>
 </resources>
