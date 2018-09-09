@@ -3,10 +3,4 @@
 
     <item android:drawable="@color/splash_bg" />
 
-    <item>
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/gdg_splash" />
-    </item>
-
 </layer-list>

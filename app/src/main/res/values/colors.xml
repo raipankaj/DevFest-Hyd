@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#0f031e</color>
     <color name="colorAccent">#001a33</color>
 
+    <color name="app_windows_bg">#FAFAFA</color>
     <color name="splash_bg">#FBFBFB</color>
     <color name="notification_tint">#536DFE</color>
 </resources>

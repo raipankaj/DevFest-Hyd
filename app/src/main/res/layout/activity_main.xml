@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/wvPage"
-    android:visibility="gone"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity" />
+    tools:context=".ui.MainActivity">
+
+    <WebView
+        android:id="@+id/wvPage"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/flLoading"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/app_windows_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/loading_animated_view" />
+
+    </FrameLayout>
+
+</FrameLayout>

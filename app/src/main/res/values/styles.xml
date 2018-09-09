@@ -6,11 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@drawable/splash_screen_bg</item>
+        <item name="android:windowBackground">@color/app_windows_bg</item>
     </style>
 
-    <style name="SplashScreenTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
-        <item name="android:windowBackground">@drawable/splash_screen_bg</item>
-    </style>
 
 </resources>

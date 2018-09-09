@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory
 import android.media.RingtoneManager
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.webkit.WebView
@@ -46,7 +47,14 @@ class MainActivity : AppCompatActivity() {
         }
         override fun onPageFinished(view: WebView?, url: String?) {
             if (mIsFirstTimeLoaded.not()) {
-                wvPage.visibility = View.VISIBLE
+
+                Handler().postDelayed(object : Runnable {
+                    override fun run() {
+                        flLoading.visibility = View.GONE
+                    }
+
+                },1500)
+
                 mIsFirstTimeLoaded = true
             }
         }

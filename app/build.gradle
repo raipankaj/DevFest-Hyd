@@ -31,6 +31,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$appCompactVersion"
     implementation "com.google.firebase:firebase-core:$firebaseCoreVersion"
-    implementation 'com.google.firebase:firebase-messaging:17.3.1'
+    implementation "com.google.firebase:firebase-messaging:$firebaseMessagingVersion"
+    implementation "com.tasomaniac:delayed-progress:$tasomaniacVersion"
 }
 apply plugin: 'com.google.gms.google-services'

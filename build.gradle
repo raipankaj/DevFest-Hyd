@@ -6,6 +6,7 @@ buildscript {
         appCompactVersion = '1.0.0-rc02'
         firebaseCoreVersion = '16.0.3'
         firebaseMessagingVersion = '17.3.1'
+        tasomaniacVersion = '0.4'
     }
     repositories {
         google()
