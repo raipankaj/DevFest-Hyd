@@ -3,4 +3,11 @@
 
     <item android:drawable="@color/splash_bg" />
 
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/gdg_logo" />
+
+    </item>
 </layer-list>

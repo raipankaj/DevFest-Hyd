@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,20 +8,51 @@
 
     <WebView
         android:id="@+id/wvPage"
-        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_progress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintTop_toTopOf="@+id/guide_progress"
+        app:spb_colors="@array/progress_indicator"
+        app:spb_mirror_mode="true"
+        app:spb_progressiveStart_activated="true"
+        app:spb_progressiveStart_speed="1.2"
+        app:spb_progressiveStop_speed="3.4"
+        app:spb_reversed="true"
+        app:spb_sections_count="3"
+        app:spb_speed="4.0"
+        app:spb_stroke_separator_length="@dimen/progress_bar_stroke_separator_length"
+        app:spb_stroke_width="@dimen/progress_bar_stroke_width" />
 
     <FrameLayout
         android:id="@+id/flLoading"
-        android:clickable="true"
-        android:focusable="true"
-        android:background="@color/app_windows_bg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/app_windows_bg"
+        android:clickable="true"
+        android:focusable="true">
 
-        <include layout="@layout/loading_animated_view" />
+        <include
+            layout="@layout/loading_animated_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/gdg_logo_margin_top"
+            android:layout_marginEnd="@dimen/gdg_logo_margin_end" />
 
     </FrameLayout>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

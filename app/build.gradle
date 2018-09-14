@@ -31,7 +31,11 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$appCompactVersion"
     implementation "com.google.firebase:firebase-core:$firebaseCoreVersion"
+    implementation "com.google.firebase:firebase-inappmessaging-display:$inAppMessagingVersion"
     implementation "com.google.firebase:firebase-messaging:$firebaseMessagingVersion"
     implementation "com.tasomaniac:delayed-progress:$tasomaniacVersion"
+    implementation 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
 }
 apply plugin: 'com.google.gms.google-services'

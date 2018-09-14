@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="progress_bar_stroke_width">4dp</dimen>
+    <dimen name="progress_bar_stroke_separator_length">4dp</dimen>
+    <dimen name="gdg_logo_margin_end">8dp</dimen>
+    <dimen name="gdg_logo_margin_top">8dp</dimen>
+</resources>

@@ -7,4 +7,33 @@
         It should describe the category of notifications that will be sent through this channel
      -->
     <string name="default_notification_channel_name" translatable="true">News</string>
+
+    <string name="shortcut_gallery">Gallery</string>
+    <string name="shortcut_schedule">Schedule</string>
+    <string name="shortcut_join">Join GDG</string>
+
+
+    <string name="shortcut_gallery_url" translatable="false">https://plus.google.com/photos/114190263289122404629/album/6599091486318803713</string>
+    <string name="shortcut_schedule_url" translatable="false">https://devfest.gdghyderabad.in/schedule/</string>
+    <string name="shortcut_join_url" translatable="false">https://www.meetup.com/GDGHyderabad/</string>
+
+
+    <integer-array name="progress_indicator">
+        <item>@color/progress_blue</item>
+        <item>@color/progress_red</item>
+        <item>@color/progress_yellow</item>
+        <item>@color/progress_green</item>
+    </integer-array>
+
+    <string-array name="shortcuts_key_url">
+        <item>@string/shortcut_gallery_url</item>
+        <item>@string/shortcut_schedule_url</item>
+        <item>@string/shortcut_join_url</item>
+    </string-array>
+
+    <string-array name="shortcuts_key">
+        <item>@string/shortcut_gallery</item>
+        <item>@string/shortcut_schedule</item>
+        <item>@string/shortcut_join</item>
+    </string-array>
 </resources>

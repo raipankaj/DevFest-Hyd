@@ -5,14 +5,16 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.media.RingtoneManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import gdg.hyderabad.gdgdevfesthyd.ui.MainActivity
 import gdg.hyderabad.gdgdevfesthyd.R
+import gdg.hyderabad.gdgdevfesthyd.ui.MainActivity
+import gdg.hyderabad.gdgdevfesthyd.utils.AppConstants
 
 class FCMService : FirebaseMessagingService() {
 
@@ -38,8 +40,9 @@ class FCMService : FirebaseMessagingService() {
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
                 .setSmallIcon(R.drawable.dev_notification)
+                .setLargeIcon(BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher))
                 .setColor(ContextCompat.getColor(this, R.color.notification_tint))
-                .setContentTitle(title ?: "DevFest Hyd")
+                .setContentTitle(title ?: AppConstants.Notifications.TITLE)
                 .setContentText(messageBody)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
@@ -50,7 +53,7 @@ class FCMService : FirebaseMessagingService() {
         // Since android Oreo notification channel is needed.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(channelId,
-                    "DevFest Hyd",
+                    AppConstants.Notifications.CHANNEL_NAME,
                     NotificationManager.IMPORTANCE_DEFAULT)
             notificationManager.createNotificationChannel(channel)
         }
