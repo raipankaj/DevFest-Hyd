@@ -8,7 +8,8 @@ buildscript {
         firebaseMessagingVersion = '17.3.1'
         tasomaniacVersion = '0.4'
         inAppMessagingVersion = '17.0.1'
-        lottieVersion = '2.6.1'
+        smoothProgressbarVersion = '1.1.0'
+        constraintLayoutVersion = '1.1.3'
     }
     repositories {
         google()
